@@ -1,0 +1,10 @@
+package edu.fatec;
+
+public class TesteDeclaracao {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

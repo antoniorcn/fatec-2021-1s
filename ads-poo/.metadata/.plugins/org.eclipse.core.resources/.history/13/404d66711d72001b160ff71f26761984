@@ -1,0 +1,25 @@
+package edu.fatec;
+
+class Aluno { 
+	String nome;
+	String ra;
+	
+	public Aluno(String ra, String nome) { 
+		this.ra = ra;
+		this.nome = nome;
+	}
+	
+	public void mostrarNaTela() { 
+		System.out.printf("RA: %s   Nome: %s", ra, nome);
+	}
+}
+
+public class CodigoTesteMemoria {
+
+	public static void main(String[] args) {
+		int a = 10;
+		
+
+	}
+
+}

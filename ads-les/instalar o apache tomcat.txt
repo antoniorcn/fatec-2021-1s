@@ -1,0 +1,21 @@
+Instalar o Apache Tomcat
+
+1) Baixar o apache tomcat https://downloads.apache.org/tomcat/tomcat-9/v9.0.43/bin/apache-tomcat-9.0.43.zip
+
+2) Descompacte o arquivo
+
+3) Abra um prompt de comandos
+
+4) Acesse o diretorio apache-tomcat-9.0.43\bin
+
+5) Execute o startup.bat
+
+// Se ocorrer erros
+
+6) definir a variavel JAVA_HOME
+SET JAVA_HOME=C:\Program Files\Java\jdk1.8.0_261
+
+7) executar novamente o startup.bat
+
+
+Abrir o eclipse  File -> New ... -> Project ... -> Dynamic Web Project

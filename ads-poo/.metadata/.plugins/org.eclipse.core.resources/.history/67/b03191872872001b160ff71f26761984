@@ -1,0 +1,15 @@
+package edu.fatec;
+
+public class TesteStringBuffer {
+
+	public static void main(String[] args) {
+		System.out.println("Inicio do programa");
+		// StringBuffer texto = new StringBuffer("");
+		String texto = "";
+		for (int i = 0; i < 100000; i++) { 
+			//texto.append(i);
+			texto += i;
+		}
+		System.out.println(texto);
+	}
+}

@@ -1,0 +1,20 @@
+package edu.fatec;
+
+public class TesteStrings {
+	
+	public static void main(String[] args) {
+		
+		String a = "A";
+		String b = "B";
+		String c = a;
+		String d = "A";
+		
+		if (a == c) { 
+			System.out.println("A é igual a C");
+		} else { 
+			System.out.println("A é diferente de C");
+		}
+		
+	}
+
+}
