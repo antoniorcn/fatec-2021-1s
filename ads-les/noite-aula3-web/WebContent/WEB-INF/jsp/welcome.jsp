@@ -6,5 +6,8 @@
 </head>
 <body>
 	<h2> Bem Vindo </h2>
+	
+	<h5>Cachorro 1: ${PET1}</h5>
+	<h5>Cachorro 2: ${PET2}</h5>
 </body>
 </html>
