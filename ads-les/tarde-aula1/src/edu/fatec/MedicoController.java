@@ -1,10 +1,13 @@
 package edu.fatec;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +18,17 @@ import com.google.gson.Gson;
 
 @WebServlet("/medico")
 public class MedicoController extends HttpServlet {
-
+	
+	
+	public List<Medico> getListaMedicos() { 
+		List<Medico> medicosEncontrados = (List<Medico>)getServletContext().getAttribute("LISTA");
+		if (medicosEncontrados == null) { 
+			medicosEncontrados = new ArrayList<>();
+			getServletContext().setAttribute("LISTA", medicosEncontrados);
+		}
+		return medicosEncontrados;
+	}
+	
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		System.out.println("Medico Controller executado");
@@ -25,17 +38,7 @@ public class MedicoController extends HttpServlet {
 			valorCRM = "";
 		}
 		
-		Medico m1 = new Medico("0001", "Dr. Takagima", "Cardiologista");
-		Medico m2 = new Medico("0002", "Dra. Pimentel", "Ginecologista");
-		Medico m3 = new Medico("0003", "Dr. Ronaldo", "Clinico Geral");
-		Medico m4 = new Medico("0004", "Dr. Dolitle", "Veterinário");
-		Medico[] medicos = {m1, m2, m3, m4};
-		List<Medico> medicosEncontrados = new ArrayList<>();
-		for (Medico m : medicos) { 
-			if (m.getCrm().contains(valorCRM)) { 
-				medicosEncontrados.add(m);
-			}
-		}
+		List<Medico> medicosEncontrados = getListaMedicos();
 		
 		Gson gson = new Gson();
 		String medicosJSon = gson.toJson(medicosEncontrados);
@@ -48,5 +51,37 @@ public class MedicoController extends HttpServlet {
 		PrintWriter out = res.getWriter();
 		// out.println("<h3>Servlet MedicoController foi acionado</h3>");	
 		out.println(medicosJSon);
+	}
+	
+	public void doOptions(HttpServletRequest request, HttpServletResponse response)  throws ServletException, IOException {
+		response.setContentType("text/plain"); // Mime Type
+		response.addHeader("Access-Control-Allow-Origin", "*");
+		response.addHeader("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,PATCH,OPTIONS");
+		response.addHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	}
+	
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse response)  throws ServletException, IOException {
+		BufferedReader br = request.getReader();
+		System.out.println("POST Acionado:");
+		
+		List<Medico> medicosEncontrados = getListaMedicos();
+		
+		StringBuffer sb = new StringBuffer();
+		while (br.ready()) { 
+			sb.append(br.readLine());
+		}
+		
+		Gson gson = new Gson();
+		Medico m = gson.fromJson(sb.toString(), Medico.class);
+		medicosEncontrados.add(m);
+		
+		
+		response.setContentType("text/plain"); // Mime Type
+		response.addHeader("Access-Control-Allow-Origin", "*");
+		response.addHeader("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,PATCH,OPTIONS");
+		response.addHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+		PrintWriter out = response.getWriter();
+		out.println("OK");
 	}
 }

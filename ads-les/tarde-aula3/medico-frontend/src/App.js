@@ -9,16 +9,43 @@ function cabecalho() {
 
 class CorpoMedico extends React.Component { 
   state = { 
-    nomeMedico : "João Silva",
+    medicoAtual : {
+      nome : "",
+      crm : "",
+      especialidade: ""
+    },
+    
     lista: [
     ],
   }
 
-  inputChange(novoTexto) { 
+  inputChange(campo, novoTexto) { 
     const novoState = {...this.state};
-    novoState.nomeMedico = novoTexto;
+    novoState.medicoAtual[campo] = novoTexto;
     this.setState(novoState);
-    // console.log(novoTexto);
+  }
+
+  // adicionar() { 
+  //   const novoState = {...this.state};
+  //   novoState.lista.push({...this.state.medicoAtual});
+  //   this.setState(novoState);
+  // }
+
+  adicionar() { 
+    const apiUrl = `http://localhost:8080/tarde-aula1/medico`;
+        fetch(apiUrl, {
+          method: 'POST',
+          headers: {
+            Accept: 'text/plain',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(this.state.medicoAtual)
+        }).then(
+          (response)=> {
+            console.log(response.body);
+            this.carregarMedicos();
+          }
+        );
   }
 
   render() { 
@@ -26,17 +53,53 @@ class CorpoMedico extends React.Component {
 
     for (let i = 0; i < this.state.lista.length; i++) { 
       displayLista.push(
-        <p key={i}>{this.state.lista[i].nome} - {this.state.lista[i].especialidade}</p>);
+        <tr key={i}>
+          <td>{this.state.lista[i].crm}</td>
+          <td>{this.state.lista[i].nome}</td>
+          <td>{this.state.lista[i].especialidade}</td>
+        </tr>);
     }    
     
     return (
       <div>
-        <p>Nome dos médicos</p>
-        <input  type="TEXT" value={this.state.nomeMedico} 
-                placeholder="Digite o nome do medico"
-                onChange={(novoTexto)=>{this.inputChange(novoTexto.target.value)}}/>
-        {displayLista}
-        {this.botaoAlterar()}
+        <p>Dados do Médico</p>
+        <div className="form-group">
+          <label>CRM: </label>
+          <input  type="TEXT" value={this.state.medicoAtual.crm} 
+                  placeholder="Digite o CRM do medico"
+                  className="form-control"
+                  onChange={(novoTexto)=>{this.inputChange('crm', novoTexto.target.value)}}/>
+          
+        </div>
+        <div className="form-group">
+          <label>Nome: </label>
+          <input  type="TEXT" value={this.state.medicoAtual.nome} 
+                  placeholder="Digite o nome do medico"
+                  className="form-control"
+                  onChange={(novoTexto)=>{this.inputChange('nome', novoTexto.target.value)}}/>
+        </div>
+        <div className="form-group">
+          <label>Especialidade: </label>
+          <input  type="TEXT" value={this.state.medicoAtual.especialidade} 
+                  placeholder="Digite a especialidade do medico"
+                  className="form-control"
+                  onChange={(novoTexto)=>{this.inputChange('especialidade', novoTexto.target.value)}}/>                           
+        </div>
+        <button className="btn btn-primary" onClick={()=>{this.adicionar()}}>Adicionar</button>
+        <p>Médicos Cadastrados</p>
+        <table className="table table-striped">
+          <thead>
+            <tr>
+              <th>CRM</th>
+              <th>Nome</th>
+              <th>Especialidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            {displayLista}
+          </tbody>
+        </table>
+        <button className="btn btn-primary" onClick={() => {this.carregarMedicos()}}>Recarregar Medicos</button>
       </div>
     );
   }
@@ -44,19 +107,12 @@ class CorpoMedico extends React.Component {
   alterarNomesMedicos() { 
     // const novoState = {};
     // novoState.lista = this.state.lista;
-    
     // const novoState = Object.assign({}, this.state);
 
     const novoState = {...this.state};
     novoState.lista[0].nome = "Dr. Dolitle";
     this.setState(novoState);
   }
-
-  botaoAlterar() { 
-    return (
-      <button onClick={() => {this.carregarMedicos()}}>Carregar</button>
-    );
-  } 
 
   carregarMedicos() { 
     axios.get(
@@ -71,7 +127,7 @@ class CorpoMedico extends React.Component {
         this.setState(novoState);
       }
     );
-    console.log("Medico acionado");
+    console.log("Medicos carregados");
   }
 }
 
@@ -80,7 +136,7 @@ class CorpoMedico extends React.Component {
 
 function retornaPagina() { 
   return (
-    <div>
+    <div className="container">
       {cabecalho()}
       <CorpoMedico/>
     </div>
