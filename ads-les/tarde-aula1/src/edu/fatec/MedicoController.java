@@ -28,7 +28,8 @@ public class MedicoController extends HttpServlet {
 		Medico m1 = new Medico("0001", "Dr. Takagima", "Cardiologista");
 		Medico m2 = new Medico("0002", "Dra. Pimentel", "Ginecologista");
 		Medico m3 = new Medico("0003", "Dr. Ronaldo", "Clinico Geral");
-		Medico[] medicos = {m1, m2, m3};
+		Medico m4 = new Medico("0004", "Dr. Dolitle", "Veterinário");
+		Medico[] medicos = {m1, m2, m3, m4};
 		List<Medico> medicosEncontrados = new ArrayList<>();
 		for (Medico m : medicos) { 
 			if (m.getCrm().contains(valorCRM)) { 
