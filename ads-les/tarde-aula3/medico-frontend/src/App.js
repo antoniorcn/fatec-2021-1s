@@ -9,8 +9,16 @@ function cabecalho() {
 
 class CorpoMedico extends React.Component { 
   state = { 
+    nomeMedico : "João Silva",
     lista: [
     ],
+  }
+
+  inputChange(novoTexto) { 
+    const novoState = {...this.state};
+    novoState.nomeMedico = novoTexto;
+    this.setState(novoState);
+    // console.log(novoTexto);
   }
 
   render() { 
@@ -24,6 +32,9 @@ class CorpoMedico extends React.Component {
     return (
       <div>
         <p>Nome dos médicos</p>
+        <input  type="TEXT" value={this.state.nomeMedico} 
+                placeholder="Digite o nome do medico"
+                onChange={(novoTexto)=>{this.inputChange(novoTexto.target.value)}}/>
         {displayLista}
         {this.botaoAlterar()}
       </div>
