@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from "axios";
-const numero = 10;
 
 class TabelaAlunos extends React.Component { 
 
@@ -9,14 +8,28 @@ class TabelaAlunos extends React.Component {
     const listaDisplay = [];
     for (let i = 0; i < lista.length; i++) { 
       listaDisplay.push(
-          <p>{lista[i].ra} - {lista[i].nome}</p>
+          <tr>
+              <td>{lista[i].ra}</td>
+              <td>{lista[i].nome}</td>
+              <td>{lista[i].nascimento}</td>
+          </tr>
       );
     }
     return (
       <div>
         <h2>Tabela de Alunos</h2>
-        {listaDisplay}
-        <button>Alterar</button>
+        <table className="table table-striped">
+          <thead>
+            <tr>
+              <th>RA</th>
+              <th>Nome</th>
+              <th>Nascimento</th>
+            </tr>
+          </thead>
+          <tbody>
+            {listaDisplay}
+          </tbody>
+        </table>
       </div>
     );
   }
@@ -24,9 +37,10 @@ class TabelaAlunos extends React.Component {
 
 function LabelInput(props) { 
   return(
-    <div style={{backgroundColor: props.corFundo}}>
+    <div className="form-group">
       <label>{props.label}</label>
       <input  type="TEXT" value={props.value} 
+              className="form-control"
               onChange={(e) => {
                 if(props.atualizarTexto) { 
                   props.atualizarTexto(e.target.value);
@@ -93,8 +107,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Hello World React {numero}</h1>
+      <div className="container">
+        <h1>Gestão de Alunos</h1>
         <LabelInput label="RA:" corFundo="#DDDD00" 
                     value={this.state.alunoAtual.ra}
                     atualizarTexto={(txt) => this.atualizarTexto('ra', txt)}/>
@@ -106,7 +120,8 @@ class App extends React.Component {
         <LabelInput label="Nascimento:" corFundo="#DDDD00"
                     value={this.state.alunoAtual.nascimento}
                     atualizarTexto={(txt) => this.atualizarTexto('nascimento', txt)}/>
-        <button onClick={()=>{this.salvar()}}>Salvar</button>
+        <button className="btn btn-primary"
+            onClick={()=>{this.salvar()}}>Salvar</button>
         <TabelaAlunos state={this.state}/>
       </div>
     );
