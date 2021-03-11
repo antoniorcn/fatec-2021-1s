@@ -1,5 +1,5 @@
 import React from 'react';
-
+import axios from "axios";
 const numero = 10;
 
 class TabelaAlunos extends React.Component { 
@@ -44,11 +44,24 @@ class App extends React.Component {
       nascimento: ""
     },
     lista: [
-      {ra: "0001", nome: "João Silva", nascimento: "05/08/2000"},
-      {ra: "0002", nome: "Maria Silva", nascimento: "09/10/1999"},
-      {ra: "0003", nome: "Pedro Alencar", nascimento: "15/03/2001"},
-      {ra: "0004", nome: "João Alencar", nascimento: "22/03/2001"},
     ]
+  }
+
+  componentDidMount() { 
+      axios.get(
+        `http://localhost:8080/noite-aula4-web/alunos`,
+          {
+            responseType: 'json',
+          }
+        ).then(
+        (response) => {
+          console.log(response);
+          const novoState = {...this.state};
+          novoState.lista = response.data;
+          this.setState(novoState);
+        }
+      );
+      console.log("Alunos carregados");
   }
 
   atualizarTexto(campo, txt) {
@@ -58,9 +71,24 @@ class App extends React.Component {
   }
 
   salvar() {
-    const newState = {...this.state};
-    newState.lista.push({...this.state.alunoAtual});
-    this.setState(newState);
+    const apiUrl = `http://localhost:8080/noite-aula4-web/adicionarAluno`;
+        fetch(apiUrl, {
+          method: 'POST',
+          headers: {
+            Accept: 'text/plain',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(this.state.alunoAtual)
+        }).then(
+          (response)=> {
+            console.log(response.body);
+            this.componentDidMount();
+          }
+        );
+
+    //const newState = {...this.state};
+    //newState.lista.push({...this.state.alunoAtual});
+    //this.setState(newState);
   }
 
   render() {
