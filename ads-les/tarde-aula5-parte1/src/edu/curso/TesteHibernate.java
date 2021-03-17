@@ -10,10 +10,11 @@ import javax.persistence.TypedQuery;
 public class TesteHibernate {
 	
 	public static void criarMedicos(EntityManagerFactory emf) { 
-		Medico m1 = new Medico();
-		m1.setCrm("000002");
-		m1.setNome("Dr. Hans Chucrutte");
-		m1.setEspecialidade("Clinica Geral");
+		Cirurgiao m1 = new Cirurgiao();
+		m1.setCrm("000003");
+		m1.setNome("Dr. Marcos Pontes");
+		m1.setEspecialidade("Neurocirurgiao");
+		m1.setExperiencia("10 anos");
 		
 		EntityManager em = emf.createEntityManager();
 		em.getTransaction().begin();
@@ -40,7 +41,7 @@ public class TesteHibernate {
 		EntityManagerFactory emf = 
 				Persistence.createEntityManagerFactory("MEDICOS");
 		
-		// criarMedicos(emf);
+		criarMedicos(emf);
 		consultarMedicos(emf);
 		
 		emf.close();
