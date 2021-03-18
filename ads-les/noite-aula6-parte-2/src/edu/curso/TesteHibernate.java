@@ -41,8 +41,8 @@ public class TesteHibernate {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("ALUNOS");
 		
 		EntityManager em = emf.createEntityManager();
-		// criarAlunos(em);
-		listarAlunos(em);
+		criarAlunos(em);
+		// listarAlunos(em);
 		em.close();
 		
 		emf.close();
