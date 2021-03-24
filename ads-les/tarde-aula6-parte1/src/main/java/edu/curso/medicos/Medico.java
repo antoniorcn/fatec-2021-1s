@@ -1,5 +1,6 @@
 package edu.curso.medicos;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -23,6 +24,7 @@ public class Medico {
 		this.id = id;
 	}
 	
+	@Column(length = 10)
 	public String getCrm() {
 		return crm;
 	}
@@ -30,6 +32,7 @@ public class Medico {
 		this.crm = crm;
 	}
 	
+	@Column(length = 100)
 	public String getNome() {
 		return nome;
 	}
@@ -37,6 +40,7 @@ public class Medico {
 		this.nome = nome;
 	}
 	
+	@Column(length = 25)
 	public String getEspecialidade() {
 		return especialidade;
 	}
