@@ -1,16 +1,19 @@
 package edu.fatec;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
-public class Aluno {
+public class Turma {
 	private long id;
-	private String ra;
 	private String nome;
-	private String nascimento;
+	private List<Aluno> alunos;
 	
 	@Id
 	@GeneratedValue
@@ -21,14 +24,6 @@ public class Aluno {
 		this.id = id;
 	}
 	
-	@Column(length=10)
-	public String getRa() {
-		return ra;
-	}
-	public void setRa(String ra) {
-		this.ra = ra;
-	}
-	
 	@Column(length=100)
 	public String getNome() {
 		return nome;
@@ -36,13 +31,12 @@ public class Aluno {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	@Column(length=10)
-	public String getNascimento() {
-		return nascimento;
-	}
-	public void setNascimento(String nascimento) {
-		this.nascimento = nascimento;
-	}
 
+	@OneToMany
+	public List<Aluno> getAlunos() {
+		return alunos;
+	}
+	public void setAlunos(List<Aluno> alunos) {
+		this.alunos = alunos;
+	}
 }

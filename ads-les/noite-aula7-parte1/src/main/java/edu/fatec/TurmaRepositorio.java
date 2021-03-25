@@ -4,7 +4,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface AlunoRepositorio extends JpaRepository<Aluno, Long>{
+public interface TurmaRepositorio extends JpaRepository<Turma, Long>{
+	
+	Turma findByNome(String nome);
 
-	Aluno findByRa(String ra);
 }
