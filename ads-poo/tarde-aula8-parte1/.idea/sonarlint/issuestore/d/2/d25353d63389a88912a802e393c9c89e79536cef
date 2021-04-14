@@ -1,0 +1,14 @@
+
+U	java:S106!"9Replace this use of System.out or System.err by a logger.(É„†ú8¢“Î—‹/
+]	java:S125"<This block of commented-out lines of code should be removed.(í‰Ñßüÿÿÿÿ8ÞÔ½—‹/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(µé†Ïúÿÿÿÿ8ìÚ°—‹/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ìö­íþÿÿÿÿ8ìÚ°—‹/
+>
+java:S1116%"Remove this empty statement.(Åñ­õþÿÿÿÿ8ºÛ­—‹/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ýÙ å8ÕªÀ—‹/
+L
+java:S3740"/Provide the parametrized type for this generic.(ÕëÕˆ8Ú¾«—‹/
+L
+java:S3740"/Provide the parametrized type for this generic.(ÕëÕˆ8ü¡«—‹/
+c
+java:S1192"FDefine a constant instead of duplicating this literal "ADMIN" 3 times.(×è“¾8§Å³˜‹/

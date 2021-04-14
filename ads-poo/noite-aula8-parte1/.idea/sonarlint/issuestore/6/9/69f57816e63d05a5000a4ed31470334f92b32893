@@ -1,0 +1,7 @@
+
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8åá«¡‹/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ÉØõÚ8ö”•¡‹/
+O
+java:S1128"-Remove this unused import 'java.util.Vector'.(ÿŒ¸Áÿÿÿÿÿ8ÅĞ¬¡‹/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(„ÅÌ–8¿³³¡‹/

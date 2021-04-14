@@ -1,0 +1,15 @@
+.label {
+    -fx-font-size: 14px;
+    -fx-background-color: gray;
+    -fx-text-fill: white;
+}
+
+#nome {
+    -fx-border-width: 2;
+    -fx-border-color: yellow;
+    -fx-padding: 10 10 10 10;
+}
+
+.estranha {
+    -fx-background-color: radial-gradient(radius 100%, red, darkgray, black);
+}
