@@ -10,8 +10,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-@Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
@@ -22,14 +22,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         try {
             auth.userDetailsService(usuarioService)
                     .passwordEncoder(getPasswordEncoder());
-//            auth.inMemoryAuthentication()
-//                    .withUser("user")
-//                    .password("password")
-//                    .roles("USER")
-//                    .and()
-//                    .withUser("admin")
-//                    .password("password")
-//                    .roles("USER", "ADMIN");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -45,14 +37,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .antMatchers("/alunos/**").hasAnyAuthority("USER", "ADMIN")
             .antMatchers("/aluno/add/**").hasAuthority("ADMIN")
             .antMatchers("/**").denyAll()
-            .and()
-            .csrf().disable()
+                .and()
+                .addFilterBefore(new JWTFiltro(), UsernamePasswordAuthenticationFilter.class)
+              .csrf().disable()
             .formLogin().disable();
     }
 
     @Bean
     public PasswordEncoder getPasswordEncoder() {
-        // return NoOpPasswordEncoder.getInstance();
-        return new BCryptPasswordEncoder();
+        return NoOpPasswordEncoder.getInstance();
+        // return new BCryptPasswordEncoder();
     }
 }
