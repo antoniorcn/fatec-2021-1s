@@ -2,6 +2,8 @@ package edu.curso;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -18,6 +20,13 @@ public class Eventos extends Application {
 
         Label lblTexto = new Label("Texto");
         Button btnOk = new Button("Ok");
+
+
+        BorderPane.setAlignment(lblTexto, Pos.TOP_CENTER);
+        BorderPane.setAlignment(btnOk, Pos.BOTTOM_CENTER);
+
+        BorderPane.setMargin(lblTexto, new Insets(10.0));
+        BorderPane.setMargin(btnOk, new Insets(10.0));
 
         pane.setTop(lblTexto);
         pane.setBottom(btnOk);

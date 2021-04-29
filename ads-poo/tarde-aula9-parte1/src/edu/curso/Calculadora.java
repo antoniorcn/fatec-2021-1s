@@ -21,13 +21,12 @@ public class Calculadora extends Application {
     public void start(Stage stage) {
         AnchorPane panPrincipal = new AnchorPane();
         AnchorPane panDisplay = new AnchorPane();
-        panDisplay.setStyle("-fx-background-color: red");
         GridPane panBotoes = new GridPane();
-        panBotoes.setStyle("-fx-background-color: green; -fx-padding: 10px");
+        panBotoes.setStyle("-fx-padding: 10px");
 
         AnchorPane.setTopAnchor(panDisplay, 5.0);
-        AnchorPane.setLeftAnchor(panDisplay, 5.0);
-        AnchorPane.setRightAnchor(panDisplay, 5.0);
+        AnchorPane.setLeftAnchor(panDisplay, 20.0);
+        AnchorPane.setRightAnchor(panDisplay, 10.0);
 
         AnchorPane.setBottomAnchor(panBotoes, 10.0);
         AnchorPane.setLeftAnchor(panBotoes, 10.0);

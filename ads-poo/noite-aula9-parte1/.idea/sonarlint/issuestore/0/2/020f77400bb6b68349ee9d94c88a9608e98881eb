@@ -1,0 +1,5 @@
+
+U	java:S106%"9Replace this use of System.out or System.err by a logger.(¯±ÑÑ8‘üß½/
+]	java:S125"<This block of commented-out lines of code should be removed.(ü²è×øÿÿÿÿ8ÏÃ€¾/
+{
+java:S1210"YOverride "equals(Object obj)" to comply with the contract of the "compareTo(T o)" method.(¿Ó×“úÿÿÿÿ8¬¡ò½/
