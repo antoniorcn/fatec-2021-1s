@@ -10,12 +10,8 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.TemporalAccessor;
 
 public class JogoBoundary extends Application
                             implements EventHandler<ActionEvent> {
@@ -27,9 +23,13 @@ public class JogoBoundary extends Application
     private TextField txtLancamento = new TextField("");
     private TextField txtMidia = new TextField("");
     private TextArea txtDescricao = new TextArea("");
+    private TextField txtDificuldade = new TextField("");
 
     private Button btnAdicionar = new Button("Adicionar");
     private Button btnPesquisar = new Button("Pesquisar");
+
+    private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    private JogoControl control = new JogoControl();
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -53,8 +53,10 @@ public class JogoBoundary extends Application
         grid.add(txtMidia, 1, 6);
         grid.add(new Label("Descricao: "), 0, 7);
         grid.add(txtDescricao, 1, 7);
-        grid.add(btnAdicionar, 0, 8);
-        grid.add(btnPesquisar, 1, 8);
+        grid.add(new Label("Dificuldade: "), 0, 8);
+        grid.add(txtDificuldade, 1, 8);
+        grid.add(btnAdicionar, 0, 9);
+        grid.add(btnPesquisar, 1, 9);
 
         btnAdicionar.addEventFilter(ActionEvent.ACTION, this);
         btnPesquisar.addEventFilter(ActionEvent.ACTION, this);
@@ -65,7 +67,6 @@ public class JogoBoundary extends Application
     }
 
     public Jogo boundaryToEntity() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         Jogo e = new Jogo();
         try {
             e.setTitulo(txtTitulo.getText());
@@ -76,6 +77,7 @@ public class JogoBoundary extends Application
 
             e.setId(Long.parseLong(txtId.getText()));
             e.setClassificacao(Integer.parseInt(txtClassificacao.getText()));
+            e.setDificuldade( Integer.parseInt(txtDificuldade.getText()) );
             LocalDate d = LocalDate.parse(txtLancamento.getText(), formatter);
             e.setLancamento(d);
         } catch (Exception ex) {
@@ -84,12 +86,35 @@ public class JogoBoundary extends Application
         return e;
     }
 
+    public void entityToBoundary(Jogo e) {
+        if (e != null){
+            try {
+                txtTitulo.setText(e.getTitulo());
+                txtGenero.setText(e.getGenero());
+                txtStudio.setText(e.getEstudio());
+                txtMidia.setText(e.getMidia());
+                txtDescricao.setText(e.getDescricao());
+
+                String txtData = e.getLancamento().format(formatter);
+                txtLancamento.setText(txtData);
+                txtId.setText(String.valueOf(e.getId()));
+                txtDificuldade.setText( String.valueOf(e.getDificuldade()) );
+                txtClassificacao.setText(String.valueOf(e.getClassificacao()));
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
+
     @Override
     public void handle(ActionEvent event) {
         if (event.getSource() == btnAdicionar) {
-            System.out.println("Botão Adicionar foi pressionado");
+            Jogo j = this.boundaryToEntity();
+            control.adicionar( j );
         } else if (event.getSource() == btnPesquisar) {
-            System.out.println("Botão Pesquisar foi pressionado");
+            Jogo j = control.pesquisarPorTitulo( txtTitulo.getText() );
+            this.entityToBoundary( j );
+
         }
     }
 }

@@ -11,6 +11,7 @@ public class Jogo {
     private LocalDate lancamento;
     private String midia;
     private String descricao;
+    private int dificuldade;
 
     public long getId() {
         return id;
@@ -66,5 +67,12 @@ public class Jogo {
     }
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public int getDificuldade() {
+        return dificuldade;
+    }
+    public void setDificuldade(int dificuldade) {
+        this.dificuldade = dificuldade;
     }
 }
