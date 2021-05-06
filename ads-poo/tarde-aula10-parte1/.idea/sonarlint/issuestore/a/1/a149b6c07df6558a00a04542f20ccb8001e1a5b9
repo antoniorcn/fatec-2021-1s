@@ -1,8 +1,8 @@
 
+N
+java:S1602",Remove useless curly braces around statement(¿ƒÚ–úÿÿÿÿ8ĞÇïú‘/
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(åöÌ­úÿÿÿÿ
 U
 java:S1611"3Remove the parentheses around the "event" parameter(¿ƒÚ–úÿÿÿÿ8ĞÇïú‘/
 S
 java:S1128"6Remove this unused import 'javafx.event.EventHandler'.(º»û˜8ĞÇïú‘/
-g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(åöÌ­úÿÿÿÿ
-N
-java:S1602",Remove useless curly braces around statement(¿ƒÚ–úÿÿÿÿ8ĞÇïú‘/

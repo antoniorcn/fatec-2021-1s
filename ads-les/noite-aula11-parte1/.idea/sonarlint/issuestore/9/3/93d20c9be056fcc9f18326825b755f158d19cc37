@@ -1,0 +1,17 @@
+
+U
+java:S1854"8Remove this useless assignment to local variable "scan".(ÅÒ²º8í§‚ú“/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(öğèò8 ìûø“/
+X	java:S125"<This block of commented-out lines of code should be removed.(ÙÔÜ£8æİİù“/
+F
+java:S1481")Remove this unused "scan" local variable.(ÅÒ²º8í§‚ú“/
+X	java:S125"<This block of commented-out lines of code should be removed.(«÷º8ÔâÑù“/
+X	java:S125%"<This block of commented-out lines of code should be removed.(ÂÕı8Óşİù“/
+a
+java:S2095"DUse try-with-resources or close this "Socket" in a "finally" clause.(±ÑŠ¥8Ùôêø“/
+U	java:S106""9Replace this use of System.out or System.err by a logger.(õÌ¬£8©¿Ñù“/
+U	java:S106
+"9Replace this use of System.out or System.err by a logger.(‹é›Ë8 ìûø“/
+X	java:S125"<This block of commented-out lines of code should be removed.(®Ø‚ã8Ğ„Áù“/
+X	java:S1251"<This block of commented-out lines of code should be removed.(ËË‘8í§‚ú“/
+X	java:S125"<This block of commented-out lines of code should be removed.(•ØÈ‰8ş‰ú“/
