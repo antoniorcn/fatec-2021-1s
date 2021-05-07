@@ -1,0 +1,12 @@
+
+Q
+java:S1611!"/Remove the parentheses around the "e" parameter(ûäïëÿÿÿÿÿ8— ”/
+N
+java:S1602!",Remove useless curly braces around statement(ûäïëÿÿÿÿÿ8ÓÍ ”/
+Q
+java:S1611"/Remove the parentheses around the "e" parameter(ã°´ ùÿÿÿÿ8ƒ ”/
+N
+java:S1602",Remove useless curly braces around statement(ã°´ ùÿÿÿÿ8 –€ ”/
+]	java:S125"<This block of commented-out lines of code should be removed.(§´ˆáûÿÿÿÿ8ğÿˆ ”/
+S
+java:S1128"6Remove this unused import 'javafx.event.EventHandler'.(º»û˜8 Â„ ”/

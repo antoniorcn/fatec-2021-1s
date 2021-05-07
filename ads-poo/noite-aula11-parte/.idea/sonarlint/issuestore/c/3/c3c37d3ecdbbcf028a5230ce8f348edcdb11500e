@@ -1,0 +1,10 @@
+
+b
+java:S1128"@Remove this unused import 'javafx.scene.input.InputMethodEvent'.(œ“•„ıÿÿÿÿ8ØúŸ”/
+V
+java:S1128"4Remove this unused import 'javafx.beans.Observable'.(æ ûÿÿÿÿ8ŠÀ—Ÿ”/
+S
+java:S1128"6Remove this unused import 'javafx.event.EventHandler'.(º»û˜8üÃÿ”/
+`
+java:S1128">Remove this unused import 'javafx.beans.InvalidationListener'.(í¿ïÈşÿÿÿÿ8ÎÀ˜Ÿ”/
+U	java:S106#"9Replace this use of System.out or System.err by a logger.(š´è8„ü…Ÿ”/
