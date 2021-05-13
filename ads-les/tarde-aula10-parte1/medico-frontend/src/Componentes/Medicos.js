@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import ContextoPrincipal from "../Contextos/ContextoPrincipal";
+import ContextoPrincipal from "../Contextos/EstadoGlobal";
 
 class CorpoMedico extends React.Component { 
     state = { 
@@ -53,6 +53,7 @@ class CorpoMedico extends React.Component {
         <div>
           <p>Dados do Médico</p>
           <p>Token = {this.context.token}</p>
+          <button onClick={() => {this.context.atualizarToken("TOKEN MEDICO");}}>Troca Token</button>
           <div className="form-group">
             <label>CRM: </label>
             <input  type="TEXT" value={this.state.medicoAtual.crm} 

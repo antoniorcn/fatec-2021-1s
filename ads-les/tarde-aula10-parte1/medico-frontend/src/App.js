@@ -2,8 +2,7 @@ import React from "react";
 import Medicos from "./Componentes/Medicos";
 import Login from "./Componentes/Login";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import ContextoPrincipal from './Contextos/ContextoPrincipal';
-import EstadoGlobal from "./Contextos/EstadoGlobal";
+import ContextoPrincipal from './Contextos/EstadoGlobal';
 
 function cabecalho() { 
   return (
@@ -15,22 +14,22 @@ function cabecalho() {
 class Principal extends React.Component { 
   render() { 
     return (
-      <EstadoGlobal>
-        <Router>
-        <div className="container">
-          <p>Token ({this.context.token})</p>
-          {cabecalho()}
-            <Switch>
-              <Route path="/login" render={Login} component={Login}/>
-              <Route path="/" render={Medicos} component={Medicos}/>
-            </Switch>
-        </div>
-        </Router>
-      </EstadoGlobal>
+      <ContextoPrincipal.Consumer> 
+        {(contexto) =>
+          <Router>
+          <div className="container">
+            <p>Token ({contexto.token})</p>
+            {cabecalho()}
+              <Switch>
+                <Route path="/login" render={Login} component={Login}/>
+                <Route path="/" render={Medicos} component={Medicos}/>
+              </Switch>
+          </div>
+          </Router>
+        }
+      </ContextoPrincipal.Consumer> 
     );
   }
 }
-
-Principal.contextType = ContextoPrincipal;
 
 export default Principal;

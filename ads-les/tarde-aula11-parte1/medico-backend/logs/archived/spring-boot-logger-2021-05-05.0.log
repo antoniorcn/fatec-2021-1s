@@ -1,0 +1,66 @@
+2021-05-05 16:25:03,434 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MedicosBackendApplication using Java 16.0.1 on DESKTOP-ADIEPD0 with PID 5764 (C:\Users\anton\git\fatec-2021-1s\ads-les\tarde-aula9-parte1\build\classes\java\main started by anton in C:\Users\anton\git\fatec-2021-1s\ads-les\tarde-aula9-parte1)
+2021-05-05 16:25:03,440 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-05 16:25:03,440 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-05 16:25:03,532 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-05 16:25:03,533 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-05 16:25:04,638 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-05 16:25:04,729 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
+2021-05-05 16:25:05,845 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-05-05 16:25:05,861 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-05 16:25:05,861 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-05 16:25:05,862 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-05-05 16:25:06,011 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-05 16:25:06,012 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2476 ms
+2021-05-05 16:25:06,079 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-05-05 16:25:06,329 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-05-05 16:25:06,337 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:medicos'
+2021-05-05 16:25:06,590 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-05 16:25:06,726 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-05-05 16:25:06,986 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-05 16:25:07,223 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-05 16:25:08,209 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-05 16:25:08,222 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-05 16:25:08,681 DEBUG org.springframework.web.filter.GenericFilterBean [restartedMain] Filter 'JWTAuthenticationFilter' configured for use
+2021-05-05 16:25:08,714 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-05 16:25:08,962 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-05 16:25:09,323 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15c424c3, org.springframework.security.web.context.SecurityContextPersistenceFilter@28798d4a, org.springframework.security.web.header.HeaderWriterFilter@62933042, org.springframework.security.web.authentication.logout.LogoutFilter@63df88d6, edu.curso.medicos.JWTAuthenticationFilter@2dfe7dcb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@62134eda, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3465e86b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a470ef6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15ae2fa6, org.springframework.security.web.session.SessionManagementFilter@5c377162, org.springframework.security.web.access.ExceptionTranslationFilter@6bcf09ae, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@49673f2e]
+2021-05-05 16:25:09,691 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-05 16:25:10,776 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2021-05-05 16:25:10,831 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-05 16:25:10,841 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MedicosBackendApplication in 7.974 seconds (JVM running for 8.645)
+2021-05-05 16:25:43,226 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-05 16:25:43,226 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-05 16:25:43,232 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 5 ms
+2021-05-05 16:31:06,062 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MedicosBackendApplication using Java 16.0.1 on DESKTOP-ADIEPD0 with PID 6904 (C:\Users\anton\git\fatec-2021-1s\ads-les\tarde-aula9-parte1\build\classes\java\main started by anton in C:\Users\anton\git\fatec-2021-1s\ads-les\tarde-aula9-parte1)
+2021-05-05 16:31:06,066 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-05 16:31:06,066 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-05 16:31:06,129 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-05 16:31:06,129 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-05 16:31:07,114 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-05 16:31:07,218 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 94 ms. Found 3 JPA repository interfaces.
+2021-05-05 16:31:08,246 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-05-05 16:31:08,261 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-05 16:31:08,262 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-05 16:31:08,262 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-05-05 16:31:08,421 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-05 16:31:08,422 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2293 ms
+2021-05-05 16:31:08,511 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-05-05 16:31:08,759 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-05-05 16:31:08,768 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:medicos'
+2021-05-05 16:31:09,031 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-05 16:31:09,120 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-05-05 16:31:09,388 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-05 16:31:09,623 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-05 16:31:10,564 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-05 16:31:10,576 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-05 16:31:10,965 DEBUG org.springframework.web.filter.GenericFilterBean [restartedMain] Filter 'JWTAuthenticationFilter' configured for use
+2021-05-05 16:31:10,997 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-05 16:31:11,201 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-05 16:31:11,405 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d2c057e, org.springframework.security.web.context.SecurityContextPersistenceFilter@9b0fb47, org.springframework.security.web.header.HeaderWriterFilter@12dcb65, org.springframework.security.web.authentication.logout.LogoutFilter@2767acf0, edu.curso.medicos.JWTAuthenticationFilter@53569f41, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@30d4cab3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b3b5b6a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@68981aaf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6beae3eb, org.springframework.security.web.session.SessionManagementFilter@75a70abc, org.springframework.security.web.access.ExceptionTranslationFilter@6e67ef91, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@739d6d6a]
+2021-05-05 16:31:11,558 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-05 16:31:11,814 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2021-05-05 16:31:11,868 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-05 16:31:11,878 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MedicosBackendApplication in 6.404 seconds (JVM running for 7.047)
+2021-05-05 16:31:18,963 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-05 16:31:18,964 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-05 16:31:18,965 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms

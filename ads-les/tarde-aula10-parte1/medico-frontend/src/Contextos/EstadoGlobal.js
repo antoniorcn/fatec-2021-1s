@@ -1,10 +1,16 @@
 import React from "react";
-import ContextoPrincipal from "./ContextoPrincipal";
 
-export default class EstadoGlobal extends React.Component { 
+const ContextoPrincipal = React.createContext(
+    {
+        token: "",
+        atualizarToken: () => {},
+    }
+);
+
+export class EstadoGlobal extends React.Component { 
 
     state = { 
-        token : ""
+        token : "teste token"
     }
 
     atualizarToken = (token) => { 
@@ -25,3 +31,5 @@ export default class EstadoGlobal extends React.Component {
         );
     }
 }
+
+export default ContextoPrincipal;

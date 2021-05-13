@@ -1,5 +1,5 @@
 import React from "react";
-import ContextoPrincipal from "../Contextos/ContextoPrincipal";
+import ContextoPrincipal from "../Contextos/EstadoGlobal";
 import LoginService from "../Services/LoginService";
 
 class Login extends React.Component { 
@@ -24,18 +24,19 @@ class Login extends React.Component {
         console.log("Login");
         console.log("Usuario ==> ", this.state.usuario);
         console.log("Senha ==> ", this.state.senha);
-
-        LoginService.login(
-            this.state.usuario, 
-            this.state.senha,
-            (tkn) => {
-                console.log("Login ocorrido com sucesso");
-                this.context.atualizarToken(tkn);
-                // this.props.history.push('/');
-            },
-            () => {
-                console.log("Usuário ou senha incorretos");
-            });
+        this.context.atualizarToken("TOKEN NOVO");
+        this.props.history.push('/');
+        // LoginService.login(
+        //     this.state.usuario, 
+        //     this.state.senha,
+        //     (tkn) => {
+        //         console.log("Login ocorrido com sucesso");
+        //         this.context.atualizarToken(tkn);
+        //         // this.props.history.push('/');
+        //     },
+        //     () => {
+        //         console.log("Usuário ou senha incorretos");
+        //     });
     }
 
     render() { 

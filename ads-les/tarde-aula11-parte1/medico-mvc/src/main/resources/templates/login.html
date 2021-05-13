@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <h1>Pagina de Login</h1>
+
+        <p th:text="'Nome: ' + ${nome}"></p>
+        <p th:text="'Numero: ' + ${numero}"></p>
+
+        <p>Lista de Nomes</p>
+        <ul>
+            <li th:each="n : ${lista}" th:text="${n}"></li>
+        </ul>
+
+    </body>
+</html>

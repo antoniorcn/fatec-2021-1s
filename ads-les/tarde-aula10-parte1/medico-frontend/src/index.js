@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {EstadoGlobal} from "./Contextos/EstadoGlobal";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <EstadoGlobal>
     <App />
-  </React.StrictMode>,
+  </EstadoGlobal>,
   document.getElementById('root')
 );
 
