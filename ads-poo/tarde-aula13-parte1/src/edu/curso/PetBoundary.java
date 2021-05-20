@@ -5,10 +5,8 @@ import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
@@ -29,8 +27,10 @@ public class PetBoundary extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         cmbRaca.setItems(racas);
+        BorderPane panePrincipal = new BorderPane();
         GridPane gp = new GridPane();
-        Scene scn = new Scene(gp, 600, 400);
+        Scene scn = new Scene(panePrincipal, 600, 400);
+        panePrincipal.setTop(gp);
 
         gp.add(new Label("Nome"), 0, 0);
         gp.add(txtNome, 1, 0);
@@ -40,6 +40,9 @@ public class PetBoundary extends Application {
         gp.add(txtPeso, 1, 2);
         gp.add(btnAdicionar, 0, 3);
         gp.add(btnPesquisar, 1, 3);
+
+        control.generateTable();
+        panePrincipal.setCenter(control.getTable());
 
         btnAdicionar.setOnAction((e) -> { control.adicionar();});
         btnPesquisar.setOnAction((e) -> { control.pesquisarPorNome();});

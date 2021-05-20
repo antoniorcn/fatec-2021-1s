@@ -1,17 +1,11 @@
 
-V
-java:S1128"4Remove this unused import 'javafx.beans.Observable'.(æ ûÿÿÿÿ8•ğâº–/
 L
-java:S37403"/Provide the parametrized type for this generic.(¾ñ»«8ÿØÒº–/
+java:S3740/"/Provide the parametrized type for this generic.(¾ñ»«8ÿØÒº–/
 L
-java:S16110"/Remove the parentheses around the "e" parameter(Ì©Á“8ØğÊ¹–/
-L
-java:S16111"/Remove the parentheses around the "e" parameter(Ç¡Ü«8­¿Ì¹–/
-O
-java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8û·áº–/
+java:S1611,"/Remove the parentheses around the "e" parameter(Ì©Á“8ØğÊ¹–/
 I
-java:S16020",Remove useless curly braces around statement(Ì©Á“8ÚĞÊ¹–/
-M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ƒùéº–/
+java:S1602,",Remove useless curly braces around statement(Ì©Á“8ÚĞÊ¹–/
+L
+java:S1611-"/Remove the parentheses around the "e" parameter(Ç¡Ü«8­¿Ì¹–/
 I
-java:S16021",Remove useless curly braces around statement(Ç¡Ü«8­¿Ì¹–/
+java:S1602-",Remove useless curly braces around statement(Ç¡Ü«8­¿Ì¹–/
