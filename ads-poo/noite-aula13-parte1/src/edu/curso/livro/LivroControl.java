@@ -76,6 +76,13 @@ public class LivroControl {
 
         table.getColumns().addAll(colId, colTitulo, colAutor);
 
+        table.getSelectionModel().selectedItemProperty().addListener(
+                        (obs, antigo, novo) -> {
+                            // System.out.println(novo.getTitulo());
+                            setEntity(novo);
+                        }
+        );
+
         table.setItems(livros);
     }
 
