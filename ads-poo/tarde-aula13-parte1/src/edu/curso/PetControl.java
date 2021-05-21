@@ -1,14 +1,13 @@
 package edu.curso;
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,11 +30,17 @@ public class PetControl {
         return peso;
     }
 
+    private ObjectProperty<LocalDate> nascimento = new SimpleObjectProperty<>();
+    public ObjectProperty<LocalDate> nascimentoProperty() { return nascimento; }
+
+    private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
     public Pet getEntity() {
         Pet p = new Pet();
         p.setNome(nome.get());
         p.setRaca(raca.get());
         p.setPeso(peso.get());
+        p.setNascimento(nascimento.get());
         return p;
     }
     private void setEntity(Pet p) {
@@ -43,6 +48,7 @@ public class PetControl {
             nome.set(p.getNome());
             raca.set(p.getRaca());
             peso.set(p.getPeso());
+            nascimento.set(p.getNascimento());
         }
     }
 
@@ -68,7 +74,16 @@ public class PetControl {
         TableColumn<Pet, Double> colPeso = new TableColumn<>("Peso");
         colPeso.setCellValueFactory(new PropertyValueFactory<Pet, Double>("peso"));
 
-        table.getColumns().addAll(colNome, colRaca, colPeso);
+        TableColumn<Pet, String> colNascimento = new TableColumn<>("Nascimento");
+        colNascimento.setCellValueFactory((item) -> {
+            String txtData = item.getValue().getNascimento().format(formatter);
+            return new ReadOnlyStringWrapper(txtData);
+        });
+        table.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            setEntity(newValue);
+        });
+
+        table.getColumns().addAll(colNome, colRaca, colPeso, colNascimento);
         table.setItems(lista);
     }
 

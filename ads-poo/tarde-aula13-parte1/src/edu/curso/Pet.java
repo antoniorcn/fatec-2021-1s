@@ -1,9 +1,12 @@
 package edu.curso;
 
+import java.time.LocalDate;
+
 public class Pet {
-    private String nome;
-    private String raca;
+    private String nome = "";
+    private String raca = "";
     private double peso;
+    private LocalDate nascimento = LocalDate.now();
 
     public String getNome() {
         return nome;
@@ -24,5 +27,12 @@ public class Pet {
     }
     public void setPeso(double peso) {
         this.peso = peso;
+    }
+
+    public LocalDate getNascimento() {
+        return nascimento;
+    }
+    public void setNascimento(LocalDate nascimento) {
+        this.nascimento = nascimento;
     }
 }

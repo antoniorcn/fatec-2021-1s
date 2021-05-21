@@ -1,0 +1,15 @@
+
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+F
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
+t
+java:S2293E"YReplace the type specification in this constructor call with the diamond operator ("<>").(ƒý€‡üÿÿÿÿ
+n
+java:S2293H"YReplace the type specification in this constructor call with the diamond operator ("<>").(ùíˆ
+n
+java:S2293K"YReplace the type specification in this constructor call with the diamond operator ("<>").(þÕža
+H
+java:S1611N"2Remove the parentheses around the "item" parameter(®‰ÊÝ
+B
+java:S1602R",Remove useless curly braces around statement(ÕÙöÆ

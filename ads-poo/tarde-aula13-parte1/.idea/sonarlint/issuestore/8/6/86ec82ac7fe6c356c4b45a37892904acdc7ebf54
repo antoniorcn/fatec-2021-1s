@@ -1,0 +1,16 @@
+
+E
+java:S3740S"/Provide the parametrized type for this generic.(¾ñ»«
+J
+java:S3740T"/Provide the parametrized type for this generic.(©£Ê™üÿÿÿÿ
+N	java:S106#"9Replace this use of System.out or System.err by a logger.(êÚôÎ
+S	java:S106%"9Replace this use of System.out or System.err by a logger.(Ð¢®ùúÿÿÿÿ
+E
+java:S1611P"/Remove the parentheses around the "e" parameter(Ì©Á“
+B
+java:S1602P",Remove useless curly braces around statement(Ì©Á“
+E
+java:S1611Q"/Remove the parentheses around the "e" parameter(Ç¡Ü«
+B
+java:S1602Q",Remove useless curly braces around statement(Ç¡Ü«
+]	java:S125U"<This block of commented-out lines of code should be removed.(å¼ØÈþÿÿÿÿ8Ð©Ü˜/
