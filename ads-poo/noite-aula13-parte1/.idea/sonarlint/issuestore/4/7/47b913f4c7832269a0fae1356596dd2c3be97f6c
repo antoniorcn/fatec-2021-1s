@@ -1,0 +1,11 @@
+
+6
+java:S2129" Remove this "String" constructor(ĞöÀî
+N	java:S106"9Replace this use of System.out or System.err by a logger.(í µŞ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÇÚÂáıÿÿÿÿ
+]	java:S125"<This block of commented-out lines of code should be removed.(çÁîÙúÿÿÿÿ8¿ã›à˜/
+N
+java:S1602",Remove useless curly braces around statement(Â•ı‚ûÿÿÿÿ8ÿŸŸà˜/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(Ê”ÊÌ8¦Í”à˜/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(·—¸Òûÿÿÿÿ8ì”šà˜/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ó»¡ˆ8‚ Ÿà˜/
