@@ -75,6 +75,12 @@ class AlunoApp extends React.Component {
           console.log(response);
           const novoState = {...this.state};
           novoState.lista = response.data;
+
+          for (let i = 0; i > novoState.lista.length; i++) { 
+            const elemento = novoState.lista[i];
+            elemento.nome = elemento.nome.toUpperCase();
+          }
+
           this.setState(novoState);
         })
         .catch((err)=> {
