@@ -1,0 +1,25 @@
+
+e
+java:S2095`"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’ÀÌ‰
+e
+java:S2095J"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’ÀÌ‰
+Y	java:S110–"<This class has 9 parents which is greater than 5 authorized.(ÌÆ……8¢ÀŸ„›/
+K
+java:S1604”"(Make this anonymous inner class a lambda(—¬ßŞùÿÿÿÿ8±ÀŸ„›/
+P	java:S125;"<This block of commented-out lines of code should be removed.(ƒÇ
+V	java:S125?"<This block of commented-out lines of code should be removed.(¸›ÛÜùÿÿÿÿ
+Q	java:S125X"<This block of commented-out lines of code should be removed.(åÕ¥Û
+Q	java:S125m"<This block of commented-out lines of code should be removed.(¸êªÕ
+t
+java:S2293y"YReplace the type specification in this constructor call with the diamond operator ("<>").(ë“©ùÿÿÿÿ
+t
+java:S2293|"YReplace the type specification in this constructor call with the diamond operator ("<>").(¹¥úÿÿÿÿÿ
+X	java:S125"<This block of commented-out lines of code should be removed.(™¦ú 8Ÿ‹Ÿ„›/
+R
+java:S1611¢"/Remove the parentheses around the "e" parameter(ÚÊÊúÿÿÿÿ8œÁŸ„›/
+H
+java:S1602¢",Remove useless curly braces around statement(ÚÊÊúÿÿÿÿ
+J
+java:S1602²",Remove useless curly braces around statement(ŠƒÖÁ8’‚¥„›/
+<
+java:S1481Q"&Remove this unused "i" local variable.(Ç¬“õ

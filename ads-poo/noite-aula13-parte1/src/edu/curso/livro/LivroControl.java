@@ -66,7 +66,7 @@ public class LivroControl {
 
     public void generatedTable() {
         TableColumn<Livro, Long> colId = new TableColumn<>("Id");
-        colId.setCellValueFactory(new PropertyValueFactory<Livro, Long>("id"));
+        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
 
         TableColumn<Livro, String> colTitulo = new TableColumn<>("Titulo");
         colTitulo.setCellValueFactory(new PropertyValueFactory<Livro, String>("titulo"));

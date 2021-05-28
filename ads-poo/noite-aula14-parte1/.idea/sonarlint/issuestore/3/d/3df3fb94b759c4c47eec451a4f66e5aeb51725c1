@@ -1,0 +1,11 @@
+
+l
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’ÀÌ‰8öÂ¶›/
+c
+java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(–©úıÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(òÄÿ…ÿÿÿÿÿ
+Z
+java:S2147 "DCombine this catch with the one at line 30, which has the same body.(É®£
+N	java:S106"9Replace this use of System.out or System.err by a logger.(¤âÓæ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ƒÀ™
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ñÛ ùÿÿÿÿ8ß‘¹›/

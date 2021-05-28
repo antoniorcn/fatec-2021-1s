@@ -1,0 +1,34 @@
+
+c
+java:S2095^"HUse try-with-resources or close this "Connection" in a "finally" clause.(–©úıÿÿÿÿ
+c
+java:S2095H"HUse try-with-resources or close this "Connection" in a "finally" clause.(–©úıÿÿÿÿ
+e
+java:S2095`"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’ÀÌ‰
+e
+java:S2095O"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’ÀÌ‰
+X	java:S110’"<This class has 9 parents which is greater than 5 authorized.(º¾‘z8ñ¾çüš/
+?
+java:S1604"(Make this anonymous inner class a lambda(Á¹»
+w
+java:S1488’"aImmediately return this expression instead of assigning it to the temporary variable "tableCell".(º¾‘z
+P
+java:S1854F":Remove this useless assignment to local variable "fmtYMD".(Ô¤ö
+Q	java:S125E"<This block of commented-out lines of code should be removed.(èÌØ
+V	java:S125K"<This block of commented-out lines of code should be removed.(Ÿ™¸¬ûÿÿÿÿ
+V	java:S125t"<This block of commented-out lines of code should be removed.(ÿÜúŒøÿÿÿÿ
+t
+java:S2293~"YReplace the type specification in this constructor call with the diamond operator ("<>").(ƒı€‡üÿÿÿÿ
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ùíˆ
+o
+java:S2293„"YReplace the type specification in this constructor call with the diamond operator ("<>").(şÕa
+I
+java:S1611‡"2Remove the parentheses around the "item" parameter(®‰Êİ
+E
+java:S1611—"/Remove the parentheses around the "e" parameter(Æ¢Â8
+T	java:S106˜"9Replace this use of System.out or System.err by a logger.(Õˆèßÿÿÿÿÿ
+C
+java:S1602­",Remove useless curly braces around statement(ÕÙöÆ
+A
+java:S1481F"+Remove this unused "fmtYMD" local variable.(Ô¤ö
