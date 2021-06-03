@@ -1,0 +1,15 @@
+
+P	java:S110]"<This class has 9 parents which is greater than 5 authorized.(º¾‘z
+>
+java:S1604Z"(Make this anonymous inner class a lambda(žÁ¹»
+v
+java:S1488]"aImmediately return this expression instead of assigning it to the temporary variable "tableCell".(º¾‘z
+—
+java:S1186("€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(É¢…é
+H
+java:S1611R"2Remove the parentheses around the "item" parameter(®‰ÊÝ
+D
+java:S1611b"/Remove the parentheses around the "e" parameter(Æ¢Â8
+S	java:S106c"9Replace this use of System.out or System.err by a logger.(Õˆèßÿÿÿÿÿ
+B
+java:S1602x",Remove useless curly braces around statement(ÕÙöÆ

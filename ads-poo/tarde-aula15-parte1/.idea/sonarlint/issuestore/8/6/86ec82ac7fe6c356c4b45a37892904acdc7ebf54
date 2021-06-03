@@ -1,0 +1,25 @@
+
+E
+java:S3740V"/Provide the parametrized type for this generic.(¾ñ»«
+J
+java:S3740W"/Provide the parametrized type for this generic.(©£Ê™üÿÿÿÿ
+X
+java:S1128"=Remove this unused import 'java.time.chrono.ChronoLocalDate'.(‘Ë¡°ÿÿÿÿÿ
+\
+java:S1128"ARemove this unused import 'javafx.beans.property.ObjectProperty'.(ÃÚô¯þÿÿÿÿ
+N	java:S106%"9Replace this use of System.out or System.err by a logger.(êÚôÎ
+S	java:S106'"9Replace this use of System.out or System.err by a logger.(Ð¢®ùúÿÿÿÿ
+V	java:S1257"<This block of commented-out lines of code should be removed.(Ñßß’øÿÿÿÿ
+g
+java:S1854W"LRemove this useless assignment to local variable "conversorStringLocalDate".(©£Ê™üÿÿÿÿ
+E
+java:S1611S"/Remove the parentheses around the "e" parameter(Ì©Á“
+B
+java:S1602S",Remove useless curly braces around statement(Ì©Á“
+E
+java:S1611T"/Remove the parentheses around the "e" parameter(Ç¡Ü«
+B
+java:S1602T",Remove useless curly braces around statement(Ç¡Ü«
+V	java:S125X"<This block of commented-out lines of code should be removed.(å¼ØÈþÿÿÿÿ
+X
+java:S1481W"=Remove this unused "conversorStringLocalDate" local variable.(©£Ê™üÿÿÿÿ
