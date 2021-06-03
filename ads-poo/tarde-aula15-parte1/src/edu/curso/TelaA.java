@@ -5,10 +5,16 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 
 public class TelaA implements TelaStrategy {
-    @Override
-    public Pane gerarConteudo() {
-        FlowPane fp = new FlowPane();
+    private FlowPane fp = new FlowPane();
+    private ExecutarComando commander;
+
+    public TelaA(ExecutarComando commander) {
+        this.commander = commander;
         fp.getChildren().addAll(new Label("Tela A"));
+    }
+
+    @Override
+    public Pane fornecerConteudo() {
         return fp;
     }
 }
