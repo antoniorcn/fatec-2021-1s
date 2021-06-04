@@ -1,0 +1,15 @@
+
+e
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’ÀÌ‰
+l
+java:S2095J"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’ÀÌ‰8æ™™¤/
+l
+java:S2095="OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’ÀÌ‰8—Šù¤/
+e
+java:S2095&"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’ÀÌ‰
+<
+java:S1481"&Remove this unused "i" local variable.(Ç¬“õ
+C
+java:S1481?"&Remove this unused "i" local variable.(Ç¬“õ8ø™™¤/
+C
+java:S1481R"&Remove this unused "i" local variable.(Ç¬“õ8¯Šù¤/

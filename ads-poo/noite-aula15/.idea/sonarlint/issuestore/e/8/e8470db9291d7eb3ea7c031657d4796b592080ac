@@ -1,0 +1,17 @@
+
+Q	java:S110b"<This class has 9 parents which is greater than 5 authorized.(ÌÆ……
+C
+java:S1604`"(Make this anonymous inner class a lambda(—¬ßŞùÿÿÿÿ
+U
+java:S1128"?Remove this unused import 'java.time.format.DateTimeFormatter'.(‰÷÷ª
+t
+java:S2293X"YReplace the type specification in this constructor call with the diamond operator ("<>").(ë“©ùÿÿÿÿ
+t
+java:S2293["YReplace the type specification in this constructor call with the diamond operator ("<>").(¹¥úÿÿÿÿÿ
+J
+java:S1611n"/Remove the parentheses around the "e" parameter(ÚÊÊúÿÿÿÿ
+Q	java:S125o"<This block of commented-out lines of code should be removed.( óŞÜ
+Q
+java:S1611u"/Remove the parentheses around the "e" parameter(ïÈíùÿÿÿÿÿ8¬’é¤/
+J
+java:S1602‡",Remove useless curly braces around statement(ŠƒÖÁ8¼Ğé¤/
