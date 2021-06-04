@@ -55,4 +55,34 @@ public class LivroDAOImpl implements LivroDAO {
         return lista;
     }
 
+    public void apagarPorId(long id) {
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD)) {
+            String sql = "DELETE FROM livro WHERE id = ?";
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setLong(1, id);
+            int i = stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void atualizar(long id, Livro l) {
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD)) {
+            String sql = "UPDATE livro SET titulo=?, lancamento=?, edicao=?, " +
+                    "autor=?, editora=?, isbn=? " +
+                    "WHERE id=?";
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setString(1, l.getTitulo());
+            stmt.setDate(2, java.sql.Date.valueOf(l.getLancamento()));
+            stmt.setInt(3, l.getEdicao());
+            stmt.setString(4, l.getAutor());
+            stmt.setString(5, l.getEditora());
+            stmt.setString(6, l.getIsbn());
+            stmt.setLong(7, id);
+            int i = stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

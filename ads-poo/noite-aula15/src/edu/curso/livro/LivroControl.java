@@ -25,6 +25,7 @@ public class LivroControl {
     private StringProperty autor = new SimpleStringProperty("");
     private StringProperty editora = new SimpleStringProperty("");
     private StringProperty isbn = new SimpleStringProperty("");
+    private BooleanProperty disableSalvar = new SimpleBooleanProperty(true);
     private LivroDAO livroDAO = new LivroDAOImpl();
 
     public void setEntity(Livro l) {
@@ -54,15 +55,32 @@ public class LivroControl {
     public void adicionar() {
         Livro l = getEntity();
         livroDAO.adicionar(l);
+        pesquisarInternamentePorTitulo("");
     }
 
-    public void pesquisarPorTitulo() {
-        List<Livro> lista = livroDAO.pesquisarPorTitulo(titulo.get());
+    public void editar() {
+        disableSalvarProperty().set(false);
+    }
+
+    public void atualizar() {
+        livroDAO.atualizar(id.get(), getEntity());
+        pesquisarInternamentePorTitulo("");
+        disableSalvarProperty().set(true);
+    }
+
+    public void pesquisarInternamentePorTitulo(String titulo) {
+        List<Livro> lista = livroDAO.pesquisarPorTitulo(titulo);
         livros.clear();
         livros.addAll(lista);
     }
 
+    public void pesquisarPorTitulo() {
+        pesquisarInternamentePorTitulo(titulo.get());
+    }
+
     public void generatedTable() {
+        pesquisarInternamentePorTitulo("");
+
         TableColumn<Livro, Long> colId = new TableColumn<>("Id");
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
 
@@ -90,7 +108,16 @@ public class LivroControl {
                                     final Button btnEditar = new Button("Editar");
                                     fp.getChildren().addAll(btnApagar, btnEditar);
                                     btnApagar.setOnAction((e) -> {
+                                        // livros.remove(getIndex());
+                                        Livro l = livros.get(getIndex());
+                                        livroDAO.apagarPorId(l.getId());
                                         livros.remove(getIndex());
+
+                                    });
+                                    btnEditar.setOnAction((e) -> {
+                                        Livro l = livros.get(getIndex());
+                                        setEntity(l);
+                                        editar();
                                     });
                                     setGraphic(fp);
                                     setText(null);
@@ -158,5 +185,9 @@ public class LivroControl {
 
     public TableView<Livro> getTable() {
         return table;
+    }
+
+    public BooleanProperty disableSalvarProperty() {
+        return disableSalvar;
     }
 }

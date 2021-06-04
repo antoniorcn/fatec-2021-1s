@@ -28,6 +28,7 @@ public class LivroBoundary extends Application {
 
     private Button btnAdicionar = new Button("Adicionar");
     private Button btnPesquisar = new Button("Pesquisar");
+    private Button btnSalvar = new Button("Salvar");
 
     private LivroControl control = new LivroControl();
 
@@ -55,6 +56,7 @@ public class LivroBoundary extends Application {
         gp.add(txtEditora,1, 6);
         gp.add(btnAdicionar, 0, 7);
         gp.add(btnPesquisar, 1, 7);
+        gp.add(btnSalvar, 2, 7);
 
         control.generatedTable();
         panePrincipal.setTop(gp);
@@ -62,6 +64,7 @@ public class LivroBoundary extends Application {
 
         btnAdicionar.setOnAction((e)->{control.adicionar();});
         btnPesquisar.setOnAction((e)->{control.pesquisarPorTitulo();});
+        btnSalvar.setOnAction((e)->{control.atualizar();});
 
         StringConverter longToStringConverter = new LongStringConverter();
         StringConverter integerToStringConverter = new IntegerStringConverter();
@@ -74,6 +77,7 @@ public class LivroBoundary extends Application {
         Bindings.bindBidirectional(txtAutor.textProperty(), control.autorProperty());
         Bindings.bindBidirectional(txtEditora.textProperty(), control.editoraProperty());
         Bindings.bindBidirectional(txtISBN.textProperty(), control.isbnProperty());
+        btnSalvar.disableProperty().bind(control.disableSalvarProperty());
 
         stage.setScene(scn);
         stage.setTitle("Gestão de Livros");
